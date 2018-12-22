@@ -1,0 +1,10 @@
+{
+  "id": "de.erna.tvh-client",
+  "version": "0.0.1",
+  "vendor": "My Company",
+  "type": "web",
+  "main": "index.html",
+  "title": "Basic TVHeadend Client",
+  "icon": "icon.png",
+  "largeIcon": "largeIcon.png"
+}
