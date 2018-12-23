@@ -57,3 +57,6 @@ typings/
 /.idea/
 *.iml
 /yarn.lock
+
+# Do not commit actual credentials, just leave defaults in place
+/tvhCredentialsService/credentials.json
