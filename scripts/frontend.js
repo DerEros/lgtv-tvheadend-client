@@ -1,15 +1,7 @@
 function getTvhCredentials() {
-    return new Promise (function(resolve, reject) {
-       webOS.service.request("luna://de.erna.tvhclient.credentials", {
-           method: "tvh/credentials/get",
-           parameters: {},
-           onSuccess: function(args) {
-               resolve(args)
-           },
-           onFailure: function(args) {
-               reject(args)
-           }
-       });
+    return serviceRequestAsPromise("luna://de.erna.tvhclient.credentials", {
+        method: "tvh/credentials/get",
+        parameters: {}
     });
 }
 
