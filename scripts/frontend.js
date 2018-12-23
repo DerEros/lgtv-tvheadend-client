@@ -1,5 +1,29 @@
+function getGreetingServiceRequest(name, successCallback) {
+    var lunaReq= webOS.service.request("luna://de.erna.tvhclient.credentials",
+        {
+            method:"greet",
+            parameters:{
+                name: name
+            },
+            onSuccess: function (args) {
+                console.log("Request successful", args);
+                successCallback(args.message);
+            },
+            onFailure: function (args) {
+                console.error("Request failed", args);
+            },
+            onComplete: function (args) {
+                console.warn("Request completed somehow", args);
+            }
+        });
+    console.log("Request: ", lunaReq);
+}
+
 function getGreeting(name) {
-    return "Hello " + name + "!";
+    console.log("Requesting greeting");
+    getGreetingServiceRequest(name, function(greeting) {
+        showMsg("out", greeting);
+    });
 }
 
 function showMsg(elementId, msg) {
@@ -7,8 +31,7 @@ function showMsg(elementId, msg) {
     out.html("<h1>" + msg + "</h1>");
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
-    var msg = getGreeting("Luna");
-    showMsg("out", msg);
+    console.log("Document loaded");
+    getGreeting("Luna");
 });

@@ -1,0 +1,9 @@
+{
+  "id": "de.erna.tvhclient.credentials",
+  "description": "TVHeadend Credentials Service",
+  "services": [
+    {
+      "name": "de.erna.tvhclient.credentials"
+    }
+  ]
+}
