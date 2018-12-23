@@ -9,9 +9,11 @@ function getTvhCredentials() {
     });
 }
 
-function getBasicChannelList() {
+function getBasicChannelList(credentials) {
     return serviceRequestAsPromise(TVH_CHANNELS_SERVICE_URL, {
        method: "tvh/channels/list",
-       parameters: {}
+       parameters: {
+           credentials: credentials
+       }
     });
 }

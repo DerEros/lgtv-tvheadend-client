@@ -4,9 +4,14 @@ function showMsg(elementId, msg) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    getBasicChannelList()
+    getTvhCredentials()
         .then(function(credentials) {
-            showMsg("out", JSON.stringify(credentials));
+            console.log("Credentials retrieved successfully");
+            return getBasicChannelList(credentials);
+        })
+        .then(function(channels) {
+            console.log("Channels retrieved successfully", channels);
+            showMsg("out", JSON.stringify(channels));
         })
         .catch(function(e) { console.log("Error occured while getting credentials: ", e)});
 });

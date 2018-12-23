@@ -12,5 +12,8 @@ module.exports = {
                 return "Value for field '" + fieldName + "' expected but field is empty/undefined";
             }
         });
+
+        return "";
     }
+
 };

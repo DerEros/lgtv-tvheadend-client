@@ -18,6 +18,8 @@ function checkCredentials (credentials) {
             return "Value for field '" + fieldName + "' expected but field is empty/undefined";
         }
     });
+
+    return "";
 }
 
 service.register("tvh/channels/list", function(message) {
