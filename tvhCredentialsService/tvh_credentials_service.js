@@ -17,6 +17,15 @@ service.register("greet", function(message) {
 
 	message.respond({
 		returnValue: true,
-		message: "Hello, " + name + "!!! " + JSON.stringify(credentials)
+		message: "Hello, " + name + "!!! "
 	});
+});
+
+service.register("tvh/credentials/get", function(message) {
+   console.log("Credentials requested");
+
+   message.respond({
+       returnValue: true,
+       message: credentials
+   })
 });

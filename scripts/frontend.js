@@ -1,3 +1,18 @@
+function getTvhCredentials() {
+    return new Promise (function(resolve, reject) {
+       webOS.service.request("luna://de.erna.tvhclient.credentials", {
+           method: "tvh/credentials/get",
+           parameters: {},
+           onSuccess: function(args) {
+               resolve(args)
+           },
+           onFailure: function(args) {
+               reject(args)
+           }
+       });
+    });
+}
+
 function getGreetingServiceRequest(name, successCallback) {
     var lunaReq= webOS.service.request("luna://de.erna.tvhclient.credentials",
         {
@@ -33,5 +48,10 @@ function showMsg(elementId, msg) {
 
 document.addEventListener('DOMContentLoaded', function () {
     console.log("Document loaded");
-    getGreeting("Luna");
+    // getGreeting("Luna");
+    getTvhCredentials()
+        .then(function(credentials) {
+            showMsg("out", JSON.stringify(credentials));
+        })
+        .catch(function(e) { console.log("Error occured while getting credentials: ", e)});
 });
