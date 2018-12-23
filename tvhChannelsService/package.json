@@ -1,0 +1,11 @@
+{
+  "name": "de.erna.tvhclient.channels",
+  "version": "1.0.0",
+  "description": "TVHeadend channels service",
+  "main": "tvh_channels_service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "GPLv3"
+}

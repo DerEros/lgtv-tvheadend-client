@@ -4,7 +4,7 @@ function showMsg(elementId, msg) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    getTvhCredentials()
+    getBasicChannelList()
         .then(function(credentials) {
             showMsg("out", JSON.stringify(credentials));
         })

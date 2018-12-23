@@ -1,0 +1,9 @@
+{
+  "id": "de.erna.tvhclient.channels",
+  "description": "HelloWorld Service",
+  "services": [
+    {
+      "name": "de.erna.tvhclient.channels"
+    }
+  ]
+}
