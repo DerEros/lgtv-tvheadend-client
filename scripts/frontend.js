@@ -1,10 +1,3 @@
-function getTvhCredentials() {
-    return serviceRequestAsPromise("luna://de.erna.tvhclient.credentials", {
-        method: "tvh/credentials/get",
-        parameters: {}
-    });
-}
-
 function showMsg(elementId, msg) {
     const out = $("#" + elementId);
     out.html("<h1>" + msg + "</h1>");
