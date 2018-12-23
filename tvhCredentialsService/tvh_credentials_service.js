@@ -3,6 +3,7 @@
 
 var pkgInfo = require('./package.json');
 var Service = require('webos-service');
+var credentials = require('./credentials');
 var service = new Service(pkgInfo.name);
 
 // a method that always returns the same value
@@ -16,6 +17,6 @@ service.register("greet", function(message) {
 
 	message.respond({
 		returnValue: true,
-		message: "Hello, " + name + "!!!"
+		message: "Hello, " + name + "!!! " + JSON.stringify(credentials)
 	});
 });
