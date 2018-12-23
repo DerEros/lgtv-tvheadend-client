@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <title>Basic TVHeadend Client</title>
 <style type="text/css">
 body {
 		width: 100%;
@@ -24,6 +25,8 @@ h1 {
 </style>
 	<script src="webOSTVjs-1.0.0/webOSTV.js" charset="utf-8"></script>
 	<script src="webOSTVjs-1.0.0/webOSTV-dev.js" charset="utf-8"></script>
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/frontend.js"></script>
 	<script type="text/javascript">
 	   //sample code for calling LS2 API
        var lunaReq= webOS.service.request("luna://com.palm.systemservice",
@@ -39,8 +42,8 @@ h1 {
 	</script>
 </head>
 <body>
-	<div>
-		<h1>Hello World!</h1>
-	</div>
+    <div id="out">
+        <h1>Foobar</h1>
+    </div>
 </body>
 </html>

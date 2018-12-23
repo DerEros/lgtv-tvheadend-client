@@ -1,0 +1,13 @@
+{
+  "name": "lgtv-tvheadend-client",
+  "version": "0.0.1",
+  "description": "Basic TVHeadend client for LG SmartTV",
+  "main": "index.js",
+  "repository": "https://github.com/DerEros/lgtv-tvheadend-client",
+  "author": "DerEros, Felitha",
+  "license": "GPLv3",
+  "private": false,
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "id": "de.erna.tvh-client",
   "version": "0.0.1",
-  "vendor": "My Company",
+  "vendor": "erna",
   "type": "web",
   "main": "index.html",
   "title": "Basic TVHeadend Client",
